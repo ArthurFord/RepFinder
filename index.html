@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>RepFinder</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <script src="script.js" charset="utf-8"></script>
-    <h1>Find your representatives</h1><br>
-    <form class="form" name="form" id="form" action="index.html" method="post">
-      <p><h3>Two Letter State Code:</h3> <br><input type="text" name="stateCode" value=""></p>
-<p><button type="button" name="button" onClick="getInfo(form)">Submit</button></p>
-<br>
-<div class="answer" id="answer" style="overflow-x:auto;">
+<head>
+  <meta charset="utf-8">
+  <title>RepFinder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <script src="script.js" charset="utf-8"></script>
 
-</div>
-    </form>
+  <div class="grid-container">
+    <div class="grid-item"><img src="assets\240px-Seal_of_the_United_States_House_of_Representatives.svg.png" class="topPic" alt="U.S. House Seal"></div>
+    <div class="grid-item"><h1>Representative Financial Profile</h1>
+
+
+      <form class="form" name="form" id="form" action="index.html" method="post">
+        <p><h2>Two Letter State Code:</h2> <br><input type="text" name="stateCode" autofocus></p>
+        <p><button type="button" name="button" onClick="getInfo(form)">Submit</button></p>
+        </form>
+        </div>
+        <div class="grid-item"><img src="assets\240px-Seal_of_the_United_States_Senate.svg.png" class="topPic" alt="U.S. Senate Seal">
+        </div>
+    </div>
+
+    <div>
+
+      <div class="answer" id="answer" style="overflow-x:auto;">
+      </div>
+      <br>
+      <div id="mapLink" class="mapLink">
+
+      </div>
+      <br>
   </body>
-</html>
+  <footer>
+    <img class="footImg" src="assets\logo-CRP.svg" alt="Center for Responsive Politics"><br>
+    All data provided by the Center for Responsive Politics.
+  </footer>
+  </html>

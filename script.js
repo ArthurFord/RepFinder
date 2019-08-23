@@ -14,6 +14,16 @@ xhttp.onreadystatechange = function() {
     var obj = JSON.parse(this.responseText);
 
 
+var mapLink = document.getElementById("mapLink");
+mapLink.innerHTML = "";
+
+var link2 = document.createElement("a");
+link2.textContent = id.toUpperCase() + " High Resolution Congressional Map (U.S. Census)"
+link2.href = "https://www2.census.gov/geo/maps/cong_dist/cd116/st_based/CD116_" + id.toUpperCase() + ".pdf";
+link2.target = "_blank";
+
+mapLink.appendChild(link2);
+
 var myDiv = document.getElementById("answer");
 answer.innerHTML = "";
 var myTable = document.createElement("table");
@@ -66,6 +76,7 @@ var tableBody = document.createElement("tbody");
 
     myTable.appendChild(tableBody);
     myDiv.appendChild(myTable);
+
   }
 
 }
